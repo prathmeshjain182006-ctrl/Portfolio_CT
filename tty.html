@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Portfolio</title>
+
+  <!-- Q2: Internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    /* Q2: H1 - center and red */
+    h1 {
+      color: red;
+      text-align: center;
+    }
+
+    /* Q5: H2 - purple, 24px, center */
+    h2 {
+      color: purple;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    /* Q3: p - green and italic (External CSS style) */
+    p {
+      color: green;
+      font-style: italic;
+    }
+
+    /* Q4: Class highlight - yellow */
+    .highlight {
+      color: yellow;
+      background-color: black;
+      padding: 4px;
+    }
+
+    /* Q4: ID main-title - blue and bold */
+    #main-title {
+      color: blue;
+      font-weight: bold;
+    }
+
+    /* Q6: Box model - 10px padding, 5px solid border, 15px margin */
+    .box-model-div {
+      padding: 10px;
+      border: 5px solid black;
+      margin: 15px;
+    }
+
+    /* Q7: 2-column grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 20px;
+    }
+
+    .grid-item {
+      background-color: lightgray;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Q8: Flexbox row */
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      margin: 20px;
+    }
+
+    .flex-item {
+      background-color: lightgreen;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Q9: Hover effect */
+    .box {
+      background-color: lightgray;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+      margin: 10px auto;
+    }
+    .box:hover {
+      background-color: yellow;
+    }
+
+    /* Q10: Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* Q11: Rotation animation */
+    .rotate {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 20px auto;
+      animation: spin 2s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    /* Section styling */
+    .section {
+      background-color: white;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    hr {
+      border: 1px solid #ccc;
+      margin: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<div class="section fade-in">
+
+  <!-- Q11: Rotating element -->
+  <div class="rotate">🚁</div>
+
+  <!-- Q1: Inline CSS - blue and bold -->
+  <h1 style="color: blue; font-weight: bold;">Prathamesh Jain</h1>
+
+  <!-- Q4: ID selector -->
+  <h2 id="main-title">First Year CSE Student</h2>
+
+  <!-- Q3: p is green and italic -->
+  <p style="text-align:center;">Drone Technology | Computer Science | Batch 2028</p>
+
+</div>
+
+<hr>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+
+  <h1>About Me</h1>
+
+  <!-- Q7: 2-column grid -->
+  <div class="grid-container">
+    <div class="grid-item">
+      <!-- Q6: Box model -->
+      <div class="box-model-div">
+        <p style="color:black; font-style:normal;">
+          I am a first-year Computer Science student studying Drone Technology.
+          I enjoy coding, building projects, and learning new technologies.
+        </p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <p style="color:black; font-style:normal;"><strong>Name:</strong> Prathamesh Jain</p>
+      <p style="color:black; font-style:normal;"><strong>Year:</strong> 1st Year</p>
+      <p style="color:black; font-style:normal;"><strong>Branch:</strong> Computer Science</p>
+      <p style="color:black; font-style:normal;"><strong>Subject:</strong> Drone Technology</p>
+      <p style="color:black; font-style:normal;"><strong>CGPA:</strong> 9.2 / 10</p>
+      <!-- Q4: highlight class - yellow text -->
+      <p class="highlight">Available for Internships!</p>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- SKILLS -->
+<div class="section" id="skills">
+
+  <h1>Skills</h1>
+
+  <!-- Q8: Flexbox row -->
+  <div class="flex-container">
+    <div class="flex-item">HTML & CSS</div>
+    <div class="flex-item">Python</div>
+    <div class="flex-item">C Language</div>
+    <div class="flex-item">Drone Tech</div>
+  </div>
+
+  <h2>CSS Concepts Learned</h2>
+
+  <!-- Q7: 2-column grid for CSS concepts -->
+  <div class="grid-container">
+    <div class="grid-item">✅ Q1 - Inline CSS</div>
+    <div class="grid-item">✅ Q2 - Internal CSS</div>
+    <div class="grid-item">✅ Q3 - External CSS</div>
+    <div class="grid-item">✅ Q4 - Class & ID Selectors</div>
+    <div class="grid-item">✅ Q5 - H2 Styling</div>
+    <div class="grid-item">✅ Q6 - Box Model</div>
+    <div class="grid-item">✅ Q7 - CSS Grid</div>
+    <div class="grid-item">✅ Q8 - Flexbox</div>
+    <div class="grid-item">✅ Q9 - Hover Effect</div>
+    <div class="grid-item">✅ Q10 - Fade-in</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- PROJECTS -->
+<div class="section" id="projects">
+
+  <h1>Projects</h1>
+
+  <!-- Q7: 2-column grid -->
+  <div class="grid-container">
+
+    <div class="grid-item">
+      <h2>CSS Assignments</h2>
+      <p style="color:black; font-style:normal;">
+        Completed 11 assignments on HTML and CSS covering
+        inline, internal, external styling and animations.
+      </p>
+    </div>
+
+    <div class="grid-item">
+      <h2>Drone Dashboard</h2>
+      <p style="color:black; font-style:normal;">
+        Built a simple drone monitoring webpage using
+        CSS Grid, Flexbox, and animation effects.
+      </p>
+    </div>
+
+    <div class="grid-item">
+      <h2>Portfolio Website</h2>
+      <p style="color:black; font-style:normal;">
+        This portfolio page built using all 11 CSS
+        concepts from the Drone Technology course.
+      </p>
+    </div>
+
+    <div class="grid-item">
+      <h2>Weather App UI</h2>
+      <p style="color:black; font-style:normal;">
+        A simple weather app interface using HTML and CSS
+        box model and hover effects.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Q9: Hover effect demo -->
+  <p style="text-align:center; color:gray; font-style:normal;">Hover over the box below:</p>
+  <div class="box">Hover Me!</div>
+
+</div>
+
+<hr>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+
+  <h1>Contact Me</h1>
+
+  <!-- Q8: Flexbox row for contact items -->
+  <div class="flex-container" style="justify-content: center;">
+    <div class="flex-item">📧 prathamesh@email.com</div>
+    <div class="flex-item">💼 LinkedIn</div>
+    <div class="flex-item">🐙 GitHub</div>
+  </div>
+
+  <p style="text-align:center;">Feel free to reach out for projects or internships!</p>
+
+</div>
+
+<!-- Footer -->
+<div style="background-color:#333; color:white; text-align:center; padding:15px; margin-top:20px;">
+  <p style="color:white; font-style:normal;">© 2025 Prathamesh Jain | Drone Technology | CSE 1st Year</p>
+</div>
+
+</body>
+</html>
